@@ -1,9 +1,37 @@
-#css
+
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
  body {
     background-color: #F2F0F0;
     }
+#nav {
+	width: 100%;
+	float: right;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; }
+#nav li {
+	float: right; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+
+
+  /*this option by default dispose the elements in a row (flex-direction: row)*/
+  display: flex;
+}
 h1 {
-    
+   font-family: 'Rubik', serif;
     color: #FF9C00;
     text-align:center;
                 }
@@ -16,7 +44,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons prob gonna change this for individual buttons*/
+/* Set a style for all buttons */
 button {
   background-color: #4CAF50;
   color: white;
@@ -31,3 +59,6 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
+
+

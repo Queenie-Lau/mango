@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <title></title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rubik">
+    <style>
+      body {
+        font-family: 'Rubik', serif;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+  <div>
+    <ul id = "nav">
+        <li><a href="/Users/kylaf/Desktop/mango website/about.html" class="nav-links">About</a></li>
+        <li><a href="/Users/kylaf/Desktop/mango website/map.html" class="nav-links">Map</a></li>
+        <li><a href="/Users/kylaf/Desktop/mango website/inspo.html" class="nav-links">Inspo</a></li>
+        <li><a href="/Users/kylaf/Desktop/mango website/chat.html" class="nav-links">Chat</a></li>
+    </ul>
+  </div>
+
+    <div class="container">
+      <center>
+          <h1>Recyclable, Not Recyclable</h1>
+          <p>As inspired Jian-Yang's "Hotdog Not Hotdog" app on HBO's Silicon Valley </p>
+          <h2>Please input an image link below! Our AI model will recognize if your image is paper, and thus recyclable!</h2>
+          <h3>Check out the counsel log to see what else the AI predicts, with its confidence score!</h3>
+      </center>
+     </div>
+     <div class="container">
+       <center>
+        <label for="image_url"><b></b></label>
+        <input type="text" placeholder="Enter URL" id="linkString" required>
+        <button type="submit" id="image-button">Image Url</button>
+        <div id="result"></div>
+      </center>
+     </div>
+     <script>
+      document.getElementById("image-button").addEventListener("click", makeRequest)
+      async function makeRequest(){
+        // https://image.shutterstock.com/image-photo/white-square-bar-napkin-isolated-260nw-152026697.jpg
+        var link = document.getElementById("linkString").value;
+        link = btoa(link)
+        var data = await fetch("https://WealthyMidnightblueAmpersand--five-nine.repl.co/" + link)// if change url , changes the thing
+        var obj = await data.json()
+
+        //added new
+        //var json = await data.json()
+        //var json = await data.text()
+        //console.log(obj) //ignore
+        //alert(obj.result.tags[0].tag.en)
+
+        //console.log(obj)
+
+        //all below is new code
+        //var isRecyclable // he reco
+        //obj.result.tags[0].tag.en
+        //
+
+        //document.getElementById("result").innerHTML = "Set your string here" // he added this
+        //document.getElementById("result").innerHTML = obj.result.tags[0].tag.en
+        // document.getElementById("result").innerHTML = obj.result.tags[1].tag.en
+        // document.getElementById("result").innerHTML = obj.result.tags[2].tag.en
+        // document.getElementById("result").innerHTML = obj.result.tags[3].tag.en
+        // document.getElementById("result").innerHTML = obj.result.tags[4].tag.en
+        console.log(obj.result.tags[0].tag.en)
+        console.log(obj.result.tags[1].tag.en)
+        console.log(obj.result.tags[2].tag.en)
+        console.log(obj.result.tags[3].tag.en)
+        console.log(obj.result.tags[4].tag.en)
+        var test1 = obj.result.tags[0].tag.en
+        var test2 = obj.result.tags[1].tag.en
+        var test3 = obj.result.tags[2].tag.en
+        var test4 = obj.result.tags[3].tag.en
+        var test5 = obj.result.tags[4].tag.en
+        if (test1 === 'paper' || test2 === 'paper' || test3 === 'paper' || test4 === 'paper' || test5 === 'paper' ){
+          document.getElementById("result").innerHTML = "This is paper, which is recyclable at your nearest blue bin!"
+        }
+        if (test1 != 'paper' || test2 != 'paper' || test3 != 'paper' || test4 != 'paper' || test5 != 'paper' ){
+          document.getElementById("result").innerHTML = "This is not paper, which is not recyclable. Refer to Google!"
+        }
+
+
+      }
+      //all below were called on the counsel
+      //things to recall: document, document.getElementById("linkString"), document.getElementById("linkString").value
+      //temp1, obj = temp1., obj.result.tags[0].tag.en, obj.result.tags[1].tag.en, obj.result.tags[2].tag.en,  document.getElementById("result")
+      //  document.getElementById("result").innerHTML = "asdflasfd",  document.getElementById("result").innerHTML = "YES! REcylacsd",  document.getElementById("result").innerHTML = "No! Trash"
+      //obj.result.tags[0].tag.en,
+     </script>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <img src="https://www.semantics3.com/blog/content/images/downloaded_images/hot-dog-and-a-not-hot-dog-the-distinction-matters-code-included-8550067fb16/1-VrpXE1hE4rO1roK0laOd7g.png" alt="photo">
+
+  </body>
+
+</html>

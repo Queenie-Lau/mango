@@ -4,31 +4,28 @@
  body {
     background-color: #F2F0F0;
     }
-
 #nav {
-  width: 100%;
-  float: right;
-  margin: 0 0 3em 0;
-  padding: 0;
-  list-style: none;
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #ccc; 
-  border-top: 1px solid #ccc; }
-
+	width: 100%;
+	float: right;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f29f05;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; }
 #nav li {
-  float: right; }
-
+	float: right; }
 #nav li a {
-  display: block;
-  padding: 8px 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #069;
-  border-right: 1px solid #ccc; }
-
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	border-right: 1px solid #ccc; }
 #nav li a:hover {
-  color: #c00;
-  background-color: #fff; }
+	color: #f29f05;
+	background-color: #fff; }
+
 
 .straight {
   height: 7px;
@@ -41,7 +38,7 @@
   /*this option by default dispose the elements in a row (flex-direction: row)*/
  
 h1 {
-   font-family: 'Rubik', serif;
+   font-family: 'Raleway', serif;
     color: #FF9C00;
     text-align:center;
                 }
@@ -53,7 +50,9 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
+.clearfix {
+  overflow: auto;
+}
 .columning {
   margin-top: 80px;
     text-align: center;

@@ -63,6 +63,24 @@ input[type=text], input[type=password] {
 
   }
 
+.minibody {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  font-family: Raleway, serif;
+}
+
+.body_title {}
+  margin: 0 auto;
+  text-align: center;
+  font-size: 70%;
+  color: #FFA8A9;
+  letter-spacing: 4px;
+
 /* Set a style for all buttons */
 button {
   background-color: #4CAF50;

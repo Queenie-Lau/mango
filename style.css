@@ -1,1 +1,33 @@
 #css
+ body {
+    background-color: #F2F0F0;
+    }
+h1 {
+    
+    color: #FF9C00;
+    text-align:center;
+                }
+input[type=text], input[type=password] {
+  width: "48";
+  padding: 8px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: "48";
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
